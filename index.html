@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- poppins font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+      .poppinsFont{
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+      }
+      #history::-webkit-scrollbar{
+        width: 8px;
+        height: 8px;
+      }
+    </style>
     <title>DevBoard</title>
 </head>
-<body class="max-w-4xl mx-auto">
+<body class="max-w-4xl mx-auto poppinsFont">
     <header>
         <nav class="h-16 mt-6 bg-[#FFFFFF] rounded-lg">
             <div class="navbar bg-slate-0 rounded-xl">
@@ -18,7 +33,7 @@
                 <div class="flex-none">
                   <div class="flex justify-evenly text-center h-11 w-24 bg-gray-100 rounded-lg">
                     <img class="w-6 h-6 mt-3 align-middle" src="assets/checkbox.png" alt="">
-                    <h1 class="mt-3 align-middle">23</h1>
+                    <h1 id="all-task" class="mt-3 align-middle font-extrabold">23</h1>
                   </div>
                   <div id="theme-btn" class="ml-7 w-11 h-11 cursor-pointer rounded-full bg-gray-100">
                     <img class="w-7 ml-[9px] mt-[8px]" src="assets/theme-btn.png" alt="">
@@ -35,21 +50,21 @@
                   <div class="mt-7"><img class="w-5 h-5" src="assets/checkbox.png" alt=""></div>
                   <div class="ml-4 mt-4">
                     <h3>Task Assigned</h3>
-                    <h4 class="font-extrabold">05</h4>
+                    <h4 id="taskAssigned" class="font-extrabold">06</h4>
                   </div>
                 </div>
             </div>
-            <div class="mt-5 bg-gradient-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-64 -ml-6 rounded-lg hover:cursor-pointer mb-4">
+            <div id="discover-btn" class="mt-5 bg-gradient-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-64 -ml-6 rounded-lg hover:cursor-pointer mb-4">
               <div class="flex ml-4 mt-4">
                 <img class="w-14 h-3/4 -mt-1" src="assets/board.png" alt="">
-                <h2 class="ml-2 text-white font-medium">Discover Something <br> New Today!</h2>
+                <h2 class="ml-2 text-white font-bold">Discover Something <br> New Today!</h2>
               </div>
             </div>
             <div class="mt-5 bg-[#F4F7FF] h-20 w-44 ml-4 rounded-lg mb-4">
               <div class=" flex justify-center text-center ">
                 <div class="mt-7"><img class="w-5 h-5" src="assets/calender.png" alt=""></div>
                 <div class="ml-4 mt-4">
-                  <h3>Enter live date</h3>
+                  <h3 id="live-date" class="mt-2.5 -ml-2 text-[#00303C]"></h3>
                 </div>
               </div>
           </div>  
@@ -57,7 +72,7 @@
               <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">ShopEase</h3>
               </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Fix Mobile Button Issue</h1>
+              <h1 id="fixMobile" class="text-base font-bold ml-3 text-[#00303C]">Fix Mobile Button Issue</h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
                 <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                   and ensure onClick works properly</p>
@@ -68,14 +83,14 @@
                   <p class="text-[#00303C] text-xs">Deadline</p>
                   <p class="text-[#00303C] text-sm">21 March 2025</p>
                 </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+                <button id="shopEase-btn" class=" w-24 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD]">Completed</button>
               </div>
             </div>
             <div class="bg-gray-100 rounded-lg">  
               <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">CloudSync</h3>
               </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Add Dark Mode</h1>
+              <h1 id="darkMode" class="text-lg font-bold ml-3 text-[#00303C]">Add Dark Mode</h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
                 <p class="text-sm text-[#000000] p-2 truncate">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
               </div>
@@ -85,14 +100,14 @@
                   <p class="text-[#00303C] text-xs">Deadline</p>
                   <p class="text-[#00303C] text-sm">21 March 2025</p>
                 </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+                <button id="cloudSync-btn" class=" w-24 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD]">Completed</button>
               </div>
             </div>
             <div class="bg-gray-100 rounded-lg mr-3">
               <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">SwiftPay</h3>
               </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Optimize  Home page</h1>
+              <h1 id="third-head" class="text-lg font-bold ml-3 text-[#00303C]">Optimize  Home page</h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
                 <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                   and ensure onClick works properly</p>
@@ -103,14 +118,14 @@
                   <p class="text-[#00303C] text-xs">Deadline</p>
                   <p class="text-[#00303C] text-sm">21 March 2025</p>
                 </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+                <button id="SwiftPay-btn" class=" w-24 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD]">Completed</button>
               </div>
             </div>
             <div class="bg-gray-100 rounded-lg ml-3 mb-3">
               <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">Meta</h3>
               </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Add new emoji 🤲</h1>
+              <h1 id="fourth-head" class="text-lg font-bold ml-3 text-[#00303C]">Add new emoji 🤲</h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
                 <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                   and ensure onClick works properly</p>
@@ -121,14 +136,14 @@
                   <p class="text-[#00303C] text-xs">Deadline</p>
                   <p class="text-[#00303C] text-sm">21 March 2025</p>
                 </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+                <button id="fourth-btn" class=" w-24 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD]">Completed</button>
               </div>
             </div>
             <div class="bg-gray-100 rounded-lg mb-3">
-              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
+              <div class="bg-white w-20 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">Google LLC</h3>
               </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Integrate OpenAI API</h1>
+              <h1 id="fifth-head" class="text-lg font-bold ml-3 text-[#00303C]">Integrate OpenAI API</h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
                 <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                   and ensure onClick works properly</p>
@@ -139,14 +154,14 @@
                   <p class="text-[#00303C] text-xs">Deadline</p>
                   <p class="text-[#00303C] text-sm">21 March 2025</p>
                 </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+                <button id="fifth-btn" class=" w-24 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD]">Completed</button>
               </div>
             </div>
             <div class="bg-gray-100 rounded-lg mr-3 mb-3">
               <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">Glassdoar</h3>
               </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Improve Job searching </h1>
+              <h1 id="sixth-head" class="text-base font-bold ml-3 text-[#00303C]">Improve Job searching </h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
                 <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                   and ensure onClick works properly</p>
@@ -157,7 +172,7 @@
                   <p class="text-[#00303C] text-xs">Deadline</p>
                   <p class="text-[#00303C] text-sm">21 March 2025</p>
                 </div>
-                <button class=" w-24 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+                <button id="sixth-btn" class=" w-24 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD]">Completed</button>
               </div>
             </div>
         </section>
@@ -167,8 +182,9 @@
             <img class="w-1/12 h-1/4 mt-1" src="assets/activity.png" alt="">
             <h3 class="ml-2 font-bold text-[#00303C]">Activity Log</h3>
           </div>
-          <button class=" w-28 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD] ml-9 mt-3">Clear History</button>
+          <button id="clear-btn" class=" w-28 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD] ml-9 mt-3">Clear History</button>
           <hr class="border-dashed mt-3">
+          <div id="history" class=""></div> 
         </section>
         </div>
     </main>
