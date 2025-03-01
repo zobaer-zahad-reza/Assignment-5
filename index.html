@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="bg-green-500">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 <body class="max-w-4xl mx-auto">
     <header>
-        <nav class="h-16 mt-6 bg-gray-50 rounded-lg">
+        <nav class="h-16 mt-6 bg-[#FFFFFF] rounded-lg">
             <div class="navbar bg-slate-0 rounded-xl">
                 <div class="flex-1 ml-3">
                   <img class="w-9" src="assets/logo.png" alt="">
@@ -28,8 +28,9 @@
         </nav>
     </header>
     <main>
-        <section class="grid grid-cols-4 gap-3 gap-x-4 mt-4 bg-[#FFFFF] rounded-lg">
-            <div class="bg-[#F4F7FF] h-20 w-44 ml-4 rounded-lg mb-4">
+        <div class="flex space-x-5">
+          <section class="grid grid-cols-3 gap-3 gap-x-4 w-[720px] mt-4 bg-white rounded-lg">
+            <div class="bg-[#F4F7FF] h-20 w-44 ml-4 rounded-lg mb-4 mt-5">
                 <div class=" flex justify-center text-center ">
                   <div class="mt-7"><img class="w-5 h-5" src="assets/checkbox.png" alt=""></div>
                   <div class="ml-4 mt-4">
@@ -38,13 +39,13 @@
                   </div>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-64 -ml-6 rounded-lg hover:cursor-pointer mb-4">
+            <div class="mt-5 bg-gradient-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-64 -ml-6 rounded-lg hover:cursor-pointer mb-4">
               <div class="flex ml-4 mt-4">
                 <img class="w-14 h-3/4 -mt-1" src="assets/board.png" alt="">
                 <h2 class="ml-2 text-white font-medium">Discover Something <br> New Today!</h2>
               </div>
             </div>
-            <div class="bg-[#F4F7FF] h-20 w-44 ml-4 rounded-lg mb-4">
+            <div class="mt-5 bg-[#F4F7FF] h-20 w-44 ml-4 rounded-lg mb-4">
               <div class=" flex justify-center text-center ">
                 <div class="mt-7"><img class="w-5 h-5" src="assets/calender.png" alt=""></div>
                 <div class="ml-4 mt-4">
@@ -52,85 +53,16 @@
                 </div>
               </div>
           </div>  
-          <!-- this is single coloumn  -->
-            <div class="bg-red-400 h-4 row-span-3"></div>
-            <div class="bg-gray-100 rounded-lg">
+            <div class="bg-gray-100 rounded-lg ml-3">
               <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">ShopEase</h3>
               </div>
               <h1 class="text-lg font-bold ml-3 text-[#00303C]">Fix Mobile Button Issue</h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
-                <p class="text-sm text-[#000000] p-2">Debug using Chrome check for DevTools overlapping.</p>
+                <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                  and ensure onClick works properly</p>
               </div>
-              <hr class="mt-2 divide-solid ml-3 mr-3">
-              <div class="flex justify-between mt-3 mb-4">
-                <div class="ml-3">
-                  <p class="text-[#00303C] text-xs">Deadline</p>
-                  <p class="text-[#00303C] text-sm">21 March 2025</p>
-                </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
-              </div>
-            </div>
-            <div class="bg-gray-100 rounded-lg">
-              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
-                <h3 class="text-xs text-[#00303C]">CloudSync</h3>
-              </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Add Dark Mode</h1>
-              <div class="bg-white w-48 ml-3 rounded-lg">
-                <p class="text-sm text-[#000000] p-2">Store the user's preference in localStorage,update.</p>
-              </div>
-              <hr class="mt-2 divide-solid ml-3 mr-3">
-              <div class="flex justify-between mt-3 mb-4">
-                <div class="ml-3">
-                  <p class="text-[#00303C] text-xs">Deadline</p>
-                  <p class="text-[#00303C] text-sm">21 March 2025</p>
-                </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
-              </div>
-            </div>
-            <div class="bg-gray-100 rounded-lg">
-              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
-                <h3 class="text-xs text-[#00303C]">SwiftPay</h3>
-              </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Optimize  Home page</h1>
-              <div class="bg-white w-48 ml-3 rounded-lg">
-                <p class="text-sm text-[#000000] p-2">Debug using Chrome DevTools for overlapping</p>
-              </div>
-              <hr class="mt-2 divide-solid ml-3 mr-3">
-              <div class="flex justify-between mt-3 mb-4">
-                <div class="ml-3">
-                  <p class="text-[#00303C] text-xs">Deadline</p>
-                  <p class="text-[#00303C] text-sm">21 March 2025</p>
-                </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
-              </div>
-            </div>
-            <div class="bg-gray-100 rounded-lg">
-              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
-                <h3 class="text-xs text-[#00303C]">Meta</h3>
-              </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Add new emoji 🤲</h1>
-              <div class="bg-white w-48 ml-3 rounded-lg">
-                <p class="text-sm text-[#000000] p-2">Debug using Chrome DevTools,check for ensure onClick works properly.</p>
-              </div>
-              <hr class="mt-2 divide-solid ml-3 mr-3">
-              <div class="flex justify-between mt-3 mb-4">
-                <div class="ml-3">
-                  <p class="text-[#00303C] text-xs">Deadline</p>
-                  <p class="text-[#00303C] text-sm">21 March 2025</p>
-                </div>
-                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
-              </div>
-            </div>
-            <div class="bg-gray-100 rounded-lg">
-              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
-                <h3 class="text-xs text-[#00303C]">Google LLC</h3>
-              </div>
-              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Integrate OpenAI API</h1>
-              <div class="bg-white w-48 ml-3 rounded-lg">
-                <p class="text-sm text-[#000000] p-2">Debug using Chrome DevTools,check for overlapping elements.</p>
-              </div>
-              <hr class="mt-2 divide-solid ml-3 mr-3">
+              <hr class="mt-2 border-dashed ml-3 mr-3">
               <div class="flex justify-between mt-3">
                 <div class="ml-3">
                   <p class="text-[#00303C] text-xs">Deadline</p>
@@ -139,15 +71,87 @@
                 <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
               </div>
             </div>
-            <div class="bg-gray-100 rounded-lg">
+            <div class="bg-gray-100 rounded-lg">  
+              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
+                <h3 class="text-xs text-[#00303C]">CloudSync</h3>
+              </div>
+              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Add Dark Mode</h1>
+              <div class="bg-white w-48 ml-3 rounded-lg">
+                <p class="text-sm text-[#000000] p-2 truncate">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+              </div>
+              <hr class="mt-2 border-dashed ml-3 mr-3">
+              <div class="flex justify-between mt-3">
+                <div class="ml-3">
+                  <p class="text-[#00303C] text-xs">Deadline</p>
+                  <p class="text-[#00303C] text-sm">21 March 2025</p>
+                </div>
+                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-100 rounded-lg mr-3">
+              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
+                <h3 class="text-xs text-[#00303C]">SwiftPay</h3>
+              </div>
+              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Optimize  Home page</h1>
+              <div class="bg-white w-48 ml-3 rounded-lg">
+                <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                  and ensure onClick works properly</p>
+              </div>
+              <hr class="mt-2 border-dashed ml-3 mr-3">
+              <div class="flex justify-between mt-3 mb-4">
+                <div class="ml-3">
+                  <p class="text-[#00303C] text-xs">Deadline</p>
+                  <p class="text-[#00303C] text-sm">21 March 2025</p>
+                </div>
+                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-100 rounded-lg ml-3 mb-3">
+              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
+                <h3 class="text-xs text-[#00303C]">Meta</h3>
+              </div>
+              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Add new emoji 🤲</h1>
+              <div class="bg-white w-48 ml-3 rounded-lg">
+                <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                  and ensure onClick works properly</p>
+              </div>
+              <hr class="mt-2 border-dashed ml-3 mr-3">
+              <div class="flex justify-between mt-3 mb-4">
+                <div class="ml-3">
+                  <p class="text-[#00303C] text-xs">Deadline</p>
+                  <p class="text-[#00303C] text-sm">21 March 2025</p>
+                </div>
+                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-100 rounded-lg mb-3">
+              <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
+                <h3 class="text-xs text-[#00303C]">Google LLC</h3>
+              </div>
+              <h1 class="text-lg font-bold ml-3 text-[#00303C]">Integrate OpenAI API</h1>
+              <div class="bg-white w-48 ml-3 rounded-lg">
+                <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                  and ensure onClick works properly</p>
+              </div>
+              <hr class="mt-2 border-dashed ml-3 mr-3">
+              <div class="flex justify-between mt-3">
+                <div class="ml-3">
+                  <p class="text-[#00303C] text-xs">Deadline</p>
+                  <p class="text-[#00303C] text-sm">21 March 2025</p>
+                </div>
+                <button class=" w-24 h-10 rounded-lg hover:bg-gray-400 text-[#FFFFFF] bg-[#3752FD]">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-100 rounded-lg mr-3 mb-3">
               <div class="bg-white w-16 h-7 text-center mt-5 ml-3 pt-1 rounded-lg">
                 <h3 class="text-xs text-[#00303C]">Glassdoar</h3>
               </div>
               <h1 class="text-lg font-bold ml-3 text-[#00303C]">Improve Job searching </h1>
               <div class="bg-white w-48 ml-3 rounded-lg">
-                <p class="text-sm text-[#000000] p-2">Debug using Chrome DevTools,check for overlapping elements.</p>
+                <p class="text-sm text-[#000000] p-2 truncate">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                  and ensure onClick works properly</p>
               </div>
-              <hr class="mt-2 divide-solid ml-3 mr-3">
+              <hr class="mt-2 border-dashed ml-3 mr-3">
               <div class="flex justify-between mt-3">
                 <div class="ml-3">
                   <p class="text-[#00303C] text-xs">Deadline</p>
@@ -157,6 +161,21 @@
               </div>
             </div>
         </section>
+        <section class="bg-[#FFFFFF] w-48 mt-4 rounded-lg">
+          <div class="flex justify-center mt-4">
+            <img class="w-1/12 h-1/4 mt-1" src="assets/activity.png" alt="">
+            <h3 class="ml-2 font-bold text-[#00303C]">Activity Log</h3>
+          </div>
+          <button class=" w-28 h-10 rounded-lg text-[#FFFFFF] bg-[#3752FD] ml-9 mt-3">Clear History</button>
+          <hr class="border-dashed mt-3">
+        </section>
+        </div>
     </main>
 </body>
 </html>
+
+
+          <!-- this is single coloumn 
+          <div class="bg-red-400 h-4 row-span-3 h-96">
+            <div></div>
+          </div> -->
