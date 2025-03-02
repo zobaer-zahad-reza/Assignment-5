@@ -36,4 +36,7 @@ function task(event, btnid, heading) {
     "py-2",
     "text-[#000000]"
   );
+  if (newtask === 0) {
+    alert("Congrats!!! You have completed all the current task");
+  }
 }
