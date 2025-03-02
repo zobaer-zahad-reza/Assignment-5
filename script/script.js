@@ -1,8 +1,8 @@
 // theme
 document.getElementById("theme-btn").addEventListener("click", function () {
-  const rNum = parseInt(Math.random() * 255);
-  const gNum = parseInt(Math.random() * 255);
-  const bNum = parseInt(Math.random() * 255);
+  const rNum = Math.floor(Math.random() * 256);
+  const gNum = Math.floor(Math.random() * 256);
+  const bNum = Math.floor(Math.random() * 256);
   document.getElementById(
     "htmlTag"
   ).style.backgroundColor = `rgb(${rNum}, ${gNum}, ${bNum})`;
